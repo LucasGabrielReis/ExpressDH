@@ -1,6 +1,9 @@
 const ContatoController = {
     index: (req, res)  =>{
-        return(res.render("contato"))
+        let info = {
+            titulo: 'Contato'
+        }
+        return(res.render("contato", info))
     }
 }
 

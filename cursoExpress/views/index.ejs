@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= titulo %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+  <%- include('./partials/header') %> 
+  <main>
     <h1><%= titulo %></h1>
-    
-    <%cursos.forEach(valor => { %>
-      <%= valor %> <br>
-    <% }); %>
 
-  </body>
-</html>
+    <%cursos.forEach(valor => { %>
+    <%= valor %> <br>
+    <% }); %>
+  </main>
+  <%- include('./partials/footer') %>

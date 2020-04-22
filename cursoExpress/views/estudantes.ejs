@@ -1,31 +1,22 @@
-<!DOCTYPE html>
-<html>
+<%- include('./partials/header') %>
+<main>
+    <h1>Estudantes</h1>
+    <hr>
 
-    <head>
-        <title>Estudante</title>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-    </head>
-
-    <body>
-        <h1>Estudantes</h1>
-        <hr>
-
-        <%
+    <%
             const estudantes = [
                 {nome: 'Lucas', curso:'FSBlend', email:'lucas@email.com'},
                 {nome: 'Bruno', curso:'SI', email:'bruno@email.com'},
                 {nome: 'Renan', curso:'Teste', email:'renan@email.com'}
             ]
         %>
-        
-        <ul>
-            <% estudantes.forEach(valor => {  %>
-                <li>Nome: <%= valor.nome %></li>
-                <li>Curso: <%= valor.curso %></li>
-                <li>Email: <%= valor.email %></li><br>
-           <% }); %>
-        </ul>
 
-    </body>
-
-</html>
+    <ul>
+        <% estudantes.forEach(valor => {  %>
+        <li>Nome: <%= valor.nome %></li>
+        <li>Curso: <%= valor.curso %></li>
+        <li>Email: <%= valor.email %></li><br>
+        <% }); %>
+    </ul>
+</main>
+<%- include('./partials/footer') %>
