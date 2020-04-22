@@ -2,11 +2,10 @@ var express = require('express');
 var router = express.Router();
 var ContatoController = require("../controllers/ContatoController")
 var EstudanteController = require("../controllers/EstudanteController")
+var HomeController = require("../controllers/HomeController")
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.get('/', HomeController.index);
 
 router.get("/contato", ContatoController.index)
 router.get("/estudantes", EstudanteController.index)
